@@ -21,7 +21,7 @@ export class PostsMainComponent implements OnInit {
   ngOnInit() {
     this.postsService.gtPosts().subscribe(
       (res:Post[]) =>{
-      this.posts:res;
+      this.posts=res;
       }
     )
   }

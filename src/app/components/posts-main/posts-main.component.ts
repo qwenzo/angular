@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PostsService} from '../../services/posts.service';
 
 @Component({
   selector: 'app-posts-main',
@@ -15,10 +16,14 @@ export class PostsMainComponent implements OnInit {
   posts:Post[];
   
 
-  constructor() { }
+  constructor(private postsService:PostsService) { }
 
   ngOnInit() {
-   
+    this.postsService.gtPosts().subscribe(
+      (res:Post[]) =>{
+      this.posts:res;
+      }
+    )
   }
 
 }

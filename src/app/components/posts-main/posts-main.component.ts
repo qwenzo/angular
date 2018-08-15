@@ -6,11 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts-main.component.css']
 })
 export class PostsMainComponent implements OnInit {
+  styles={
+    //border: '1px solid #ddd',
+    borderRadius:'3px',
+    paddingLeft:'1%'
+
+}
   posts:Post[];
+  
 
   constructor() { }
 
   ngOnInit() {
+    if(this.posts.length==0){
+      
+    }
   }
 
 }
@@ -21,3 +31,5 @@ interface Post{
   categories:string[],
   content:string
 }
+
+

@@ -23,7 +23,7 @@ export class PostsMainComponent implements OnInit {
 
 }
 
-interface Post{
+export interface Post{
   id:number,
   title:string,
   categories:string[],

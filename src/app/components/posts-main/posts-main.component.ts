@@ -18,9 +18,7 @@ export class PostsMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if(this.posts.length==0){
-      
-    }
+   
   }
 
 }

@@ -6,10 +6,19 @@ import {Post} from '../posts-main/posts-main.component';
   styleUrls: ['./new-post.component.css']
 })
 export class NewPostComponent implements OnInit {
-  form:Post;
-  constructor() { }
+  styles={
+    borderRadius:'3px',
+    padding:'5%'
+}
+  form:Post={id:0,title:'',content:'',categories:['']};
+  constructor(form:Post) { 
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit(e){
+    console.log(e);
   }
 
 }

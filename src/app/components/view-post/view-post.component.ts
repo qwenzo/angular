@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-view-post',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-post.component.css']
 })
 export class ViewPostComponent implements OnInit {
+  id:number;
 
-  constructor() { }
+  constructor(  private route: ActivatedRoute,
+    private router: Router,
+    ) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.id = +params['id']; 
+      
+
+   });
   }
 
 }

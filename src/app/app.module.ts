@@ -11,7 +11,8 @@ import { ViewPostComponent } from './components/view-post/view-post.component';
 
 const routes = [
   {path:'',component:PostsMainComponent},
-  {path:'posts/post',component:NewPostComponent}
+  {path:'posts/post',component:NewPostComponent},
+  {path:'posts/:id',component:ViewPostComponent}
 ]
 
 @NgModule({

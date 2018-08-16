@@ -5,7 +5,9 @@
  ''
   }}
   <div *ngIf="posts.length!=0 ">
-      <div [ngStyle]="styles.postStyle" class="shadow-sm m-1" *ngFor="let post of posts">{{post.title}}<!-- <button class="float-right btn btn-danger">Delete</button> --></div>
+    <div  *ngFor="let post of posts">
+      <a routerLink="/posts/{{post.id}}"><div [ngStyle]="styles.postStyle" class="shadow-sm m-1">{{post.title}}<!-- <button class="float-right btn btn-danger">Delete</button> --> </div></a>
+      </div>
   </div>
 </div>
   </div>

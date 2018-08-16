@@ -6,6 +6,12 @@ import { AppComponent } from './app.component';
 import { PostsMainComponent } from './components/posts-main/posts-main.component';
 import { NewPostComponent } from './components/new-post/new-post.component';
 import {FormsModule} from '@angular/forms'
+import {RouterModule,Routes} from '@angular/router';
+
+const routes = [
+  {path:'',component:PostsMainComponent},
+  {path:'posts/post',component:NewPostComponent}
+]
 
 @NgModule({
   declarations: [
@@ -16,7 +22,8 @@ import {FormsModule} from '@angular/forms'
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]

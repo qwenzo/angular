@@ -8,9 +8,15 @@ import {PostsService} from '../../services/posts.service';
 })
 export class PostsMainComponent implements OnInit {
   styles={
+    postContainer:{
+      borderRadius:'3px',
+      paddingLeft:'1%'
+    },
+    newPost:{
+      //margin:'5px'
+    }
     //border: '1px solid #ddd',
-    borderRadius:'3px',
-    paddingLeft:'1%'
+   
 
 }
   posts:Post[];

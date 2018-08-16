@@ -7,6 +7,7 @@ import { PostsMainComponent } from './components/posts-main/posts-main.component
 import { NewPostComponent } from './components/new-post/new-post.component';
 import {FormsModule} from '@angular/forms'
 import {RouterModule,Routes} from '@angular/router';
+import { ViewPostComponent } from './components/view-post/view-post.component';
 
 const routes = [
   {path:'',component:PostsMainComponent},
@@ -17,7 +18,8 @@ const routes = [
   declarations: [
     AppComponent,
     PostsMainComponent,
-    NewPostComponent
+    NewPostComponent,
+    ViewPostComponent
   ],
   imports: [
     BrowserModule,

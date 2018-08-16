@@ -1,5 +1,11 @@
-<div  class="m-2 float-right"><button  [ngStyle]="styles.newPost" class="btn btn-primary">Add a Post</button></div>
+<div  class="m-2 float-right"><button routerLink="/posts/post"  [ngStyle]="styles.newPost" class="btn btn-primary">Add a Post</button></div>
 <div class="container">
   <h1>POSTS</h1>
-  <div  [ngStyle]="styles.postContainer" class="shadow-sm">{{!posts || posts.length==0 ? 'no posts to show' : 'lol'}}</div>
+  <div  [ngStyle]="styles.postContainer" class="shadow-sm">{{!posts || posts.length==0 ? 'no posts to show' : 
+ ''
+  }}
+  <div *ngIf="posts.length!=0 ">
+      <div [ngStyle]="styles.postStyle" class="shadow-sm m-1" *ngFor="let post of posts">{{post.title}}<!-- <button class="float-right btn btn-danger">Delete</button> --></div>
+  </div>
+</div>
   </div>

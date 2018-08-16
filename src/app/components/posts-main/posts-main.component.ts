@@ -10,12 +10,18 @@ export class PostsMainComponent implements OnInit {
   styles={
     postContainer:{
       borderRadius:'3px',
-      paddingLeft:'1%'
+      paddingLeft:'1%',
+      padding:'5%'
     },
     newPost:{
       //margin:'5px'
+    },
+    postStyle:{
+       border: '1px solid #ddd',
+       borderRadius:'3px',
+       padding:'1%',
     }
-    //border: '1px solid #ddd',
+   
    
 
 }
